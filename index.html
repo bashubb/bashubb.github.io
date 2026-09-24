@@ -3,72 +3,79 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bashubb — Small apps for everyday problems</title>
-  <meta name="description" content="Bashubb makes focused iPhone apps that solve small, frustrating everyday problems.">
+  <title>Bashubb — Independent Apps for iPhone</title>
+  <meta name="description" content="Bashubb makes focused iPhone apps for small, frustrating everyday problems. Discover Shrink and preview Mirrorly.">
   <link rel="canonical" href="https://bashubb.com/">
-  <meta name="theme-color" content="#f4f1e8">
+  <meta name="theme-color" content="#080808">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Bashubb">
-  <meta property="og:title" content="Bashubb — Small apps for everyday problems">
-  <meta property="og:description" content="Focused iPhone apps that solve small, frustrating everyday problems.">
+  <meta property="og:title" content="Bashubb — Independent Apps for iPhone">
+  <meta property="og:description" content="Small apps. Useful every day.">
   <meta property="og:url" content="https://bashubb.com/">
+  <link rel="icon" href="assets/bashubb-logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/bashubb-logo.png">
   <link rel="stylesheet" href="assets/site.css">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Bashubb","url":"https://bashubb.com/","founder":{"@type":"Person","name":"Hubert Kiełkowski"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Bashubb","url":"https://bashubb.com/"}</script>
 </head>
 <body>
+  <a class="skip" href="#main">Skip to content</a>
   <header class="site-header wrap">
-    <a class="wordmark" href="/" aria-label="Bashubb home">bashubb<span>.</span></a>
-    <a class="contact" href="mailto:bashubb.dev@gmail.com">Contact</a>
+    <a class="brand" href="/" aria-label="Bashubb home"><img src="assets/bashubb-logo.png" width="44" height="44" alt="">bashubb</a>
+    <nav aria-label="Main navigation"><a href="#apps">Apps</a><a href="#next">Coming soon</a><a href="mailto:bashubb.dev@gmail.com">Contact</a></nav>
   </header>
 
-  <main>
+  <main id="main">
     <section class="hero wrap">
-      <p class="eyebrow">Independent iPhone apps</p>
-      <h1>Small apps.<br><em>Useful every day.</em></h1>
-      <p class="intro">Focused tools for the little problems that get in your way. Designed and built independently by Hubert Kiełkowski.</p>
+      <p class="eyebrow">Independent apps for iPhone</p>
+      <h1>Small apps.<br><span>Useful every day.</span></h1>
+      <div class="hero-note"><p>Focused tools for the little problems that get in your way. Designed and built independently in Warsaw.</p><a href="#apps" aria-label="See the apps">↓</a></div>
     </section>
 
-    <section class="apps wrap" aria-labelledby="apps-title">
-      <div class="section-heading">
-        <p class="eyebrow">Our apps</p>
-        <h2 id="apps-title">One job.<br>Done properly.</h2>
-      </div>
-
-      <article class="app-card">
-        <div class="app-copy">
-          <p class="app-number">01</p>
-          <div>
-            <p class="app-kicker">Photo utility · iPhone</p>
-            <div class="app-title"><img src="assets/shrink-icon.webp" width="104" height="104" alt="Shrink app icon"><h3>Shrink</h3></div>
-            <p>Compress photos to a precise KB or MB limit, right on your iPhone. No uploads, no account, no subscription.</p>
-          </div>
+    <section class="available wrap" id="apps" aria-labelledby="available-title">
+      <div class="section-label"><span>01</span><p>Available now</p></div>
+      <article class="shrink-card">
+        <div class="shrink-copy">
+          <img src="assets/shrink-icon.webp" width="112" height="112" alt="Shrink app icon">
+          <p class="eyebrow">Photo utility · iPhone</p>
+          <h2 id="available-title">Shrink</h2>
+          <p>Compress photos to a precise KB or MB limit on your iPhone. No uploads, no account, no subscription.</p>
+          <div class="actions"><a class="button light" href="/shrink/">Explore Shrink ↗</a><a href="https://apps.apple.com/app/id6804833389">App Store ↗</a></div>
         </div>
-        <div class="app-actions">
-          <a class="primary" href="/shrink/">Explore Shrink <span aria-hidden="true">↗</span></a>
-          <a href="https://apps.apple.com/app/id6804833389">App Store <span aria-hidden="true">↗</span></a>
-        </div>
+        <div class="shrink-statement"><span>200 KB</span><span>500 KB</span><span>1 MB</span><strong>Your limit.<br>Handled.</strong></div>
       </article>
+    </section>
 
-      <article class="app-card coming-card" aria-labelledby="mirrorly-title">
-        <div class="coming-copy">
-          <div>
-            <p class="app-number">02</p>
-            <span class="status">Coming soon</span>
-          </div>
-          <div>
-            <p class="app-kicker">Pocket mirror · iPhone</p>
-            <div class="app-title"><img src="assets/mirrorly-icon.png" width="104" height="104" alt="Mirrorly app icon"><h3 id="mirrorly-title">Mirrorly</h3></div>
+    <section class="next" id="next" aria-labelledby="next-title">
+      <div class="wrap">
+        <div class="section-label inverse"><span>02</span><p>Next from Bashubb</p></div>
+        <article class="teaser">
+          <div class="teaser-copy">
+            <span class="pill">Coming soon</span>
+            <img src="assets/mirrorly-icon.png" width="104" height="104" alt="Mirrorly app icon">
+            <p class="eyebrow">Pocket mirror · iPhone</p>
+            <h2 id="next-title">Mirrorly</h2>
             <p>A full-screen mirror with light and zoom for the quick checks that happen away from home.</p>
-            <p class="coming-note">The product page will open when Mirrorly is available on the App Store.</p>
+            <ul><li>Full-screen mirror</li><li>Light for dark rooms</li><li>Zoom for the details</li><li>No photos saved</li></ul>
+            <p class="release-note"><span></span> In final preparation for the App Store.</p>
           </div>
-        </div>
-      </article>
+          <div class="teaser-video">
+            <video autoplay muted loop playsinline preload="metadata" poster="assets/mirrorly-poster.jpg" aria-label="Preview of Mirrorly on iPhone">
+              <source src="assets/mirrorly-teaser.mp4" type="video/mp4">
+            </video>
+            <span class="video-label">A first look at Mirrorly</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="about wrap">
+      <p class="eyebrow">The idea is simple</p>
+      <div><h2>One job.<br>Done properly.</h2><p>Every Bashubb app starts with one ordinary annoyance. The result is focused, native software without features that do not earn their place.</p></div>
     </section>
   </main>
 
-  <footer class="wrap">
-    <a class="wordmark" href="/">bashubb<span>.</span></a>
-    <p>© 2026 Hubert Kiełkowski</p>
-  </footer>
+  <footer class="wrap"><a class="brand" href="/"><img src="assets/bashubb-logo.png" width="40" height="40" alt="">bashubb</a><p>Independent apps from Warsaw, Poland.</p><a href="mailto:bashubb.dev@gmail.com">Contact ↗</a></footer>
+  <script>if(matchMedia('(prefers-reduced-motion: reduce)').matches){document.querySelectorAll('video').forEach(video=>{video.autoplay=false;video.pause()})}</script>
 </body>
 </html>
