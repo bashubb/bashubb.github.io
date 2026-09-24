@@ -4,78 +4,76 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Bashubb — Independent Apps for iPhone</title>
-  <meta name="description" content="Bashubb makes focused iPhone apps for small, frustrating everyday problems. Discover Shrink and preview Mirrorly.">
+  <meta name="description" content="One job. Good user experience. Independent iPhone apps by Bashubb. Discover Shrink and get a first look at Mirrorly.">
   <link rel="canonical" href="https://bashubb.com/">
-  <meta name="theme-color" content="#080808">
+  <meta name="theme-color" content="#000000">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Bashubb">
   <meta property="og:title" content="Bashubb — Independent Apps for iPhone">
-  <meta property="og:description" content="Small apps. Useful every day.">
+  <meta property="og:description" content="One job. Good user experience.">
   <meta property="og:url" content="https://bashubb.com/">
   <link rel="icon" href="assets/bashubb-logo.png" type="image/png">
   <link rel="apple-touch-icon" href="assets/bashubb-logo.png">
   <link rel="stylesheet" href="assets/site.css">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Bashubb","url":"https://bashubb.com/","founder":{"@type":"Person","name":"Hubert Kiełkowski"}}</script>
+  <script src="assets/site.js" defer></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Bashubb","url":"https://bashubb.com/"}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Bashubb","url":"https://bashubb.com/"}</script>
 </head>
 <body>
-  <a class="skip" href="#main">Skip to content</a>
-  <header class="site-header wrap">
-    <a class="brand" href="/" aria-label="Bashubb home"><img src="assets/bashubb-logo.png" width="44" height="44" alt="">bashubb</a>
-    <nav aria-label="Main navigation"><a href="#apps">Apps</a><a href="#next">Coming soon</a><a href="mailto:bashubb.dev@gmail.com">Contact</a></nav>
+  <a class="skip" href="#main">Skip to apps</a>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Bashubb home"><img src="assets/bashubb-logo.png" width="40" height="40" alt=""><span>bashubb</span></a>
+    <h1>One job. <span>Good user experience.</span></h1>
   </header>
 
   <main id="main">
-    <section class="hero wrap">
-      <p class="eyebrow">Independent apps for iPhone</p>
-      <h1>Small apps.<br><span>Useful every day.</span></h1>
-      <div class="hero-note"><p>Focused tools for the little problems that get in your way. Designed and built independently in Warsaw.</p><a href="#apps" aria-label="See the apps">↓</a></div>
-    </section>
+    <div class="dock" role="tablist" aria-label="Choose an app">
+      <button class="dock-app" id="tab-shrink" type="button" role="tab" aria-selected="false" aria-controls="panel-shrink" tabindex="-1" data-app="shrink">
+        <img src="assets/shrink-icon.webp" width="56" height="56" alt="">
+        <span class="app-name">Shrink</span>
+        <span class="app-status">Available now</span>
+      </button>
+      <button class="dock-app" id="tab-mirrorly" type="button" role="tab" aria-selected="true" aria-controls="panel-mirrorly" data-app="mirrorly">
+        <img src="assets/mirrorly-icon.png" width="56" height="56" alt="">
+        <span class="app-name">Mirrorly</span>
+        <span class="app-status">Coming soon</span>
+      </button>
+    </div>
 
-    <section class="available wrap" id="apps" aria-labelledby="available-title">
-      <div class="section-label"><span>01</span><p>Available now</p></div>
-      <article class="shrink-card">
-        <div class="shrink-copy">
-          <img src="assets/shrink-icon.webp" width="112" height="112" alt="Shrink app icon">
-          <p class="eyebrow">Photo utility · iPhone</p>
-          <h2 id="available-title">Shrink</h2>
-          <p>Compress photos to a precise KB or MB limit on your iPhone. No uploads, no account, no subscription.</p>
-          <div class="actions"><a class="button light" href="/shrink/">Explore Shrink ↗</a><a href="https://apps.apple.com/app/id6804833389">App Store ↗</a></div>
+    <div class="stage">
+      <section class="app-panel mirrorly-panel" id="panel-mirrorly" role="tabpanel" aria-labelledby="tab-mirrorly" tabindex="0">
+        <div class="film">
+          <video autoplay muted loop playsinline preload="metadata" poster="assets/mirrorly-poster.jpg" aria-label="Mirrorly preview">
+            <source src="assets/mirrorly-teaser.mp4" type="video/mp4">
+          </video>
+          <button class="playback" type="button" aria-label="Pause preview" hidden>
+            <svg class="pause-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 5h3v14H7zm7 0h3v14h-3z"/></svg>
+            <svg class="play-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m8 5 11 7-11 7z"/></svg>
+          </button>
         </div>
-        <div class="shrink-statement"><span>200 KB</span><span>500 KB</span><span>1 MB</span><strong>Your limit.<br>Handled.</strong></div>
-      </article>
-    </section>
+      </section>
 
-    <section class="next" id="next" aria-labelledby="next-title">
-      <div class="wrap">
-        <div class="section-label inverse"><span>02</span><p>Next from Bashubb</p></div>
-        <article class="teaser">
-          <div class="teaser-copy">
-            <span class="pill">Coming soon</span>
-            <img src="assets/mirrorly-icon.png" width="104" height="104" alt="Mirrorly app icon">
-            <p class="eyebrow">Pocket mirror · iPhone</p>
-            <h2 id="next-title">Mirrorly</h2>
-            <p>A full-screen mirror with light and zoom for the quick checks that happen away from home.</p>
-            <ul><li>Full-screen mirror</li><li>Light for dark rooms</li><li>Zoom for the details</li><li>No photos saved</li></ul>
-            <p class="release-note"><span></span> In final preparation for the App Store.</p>
+      <section class="app-panel shrink-panel" id="panel-shrink" role="tabpanel" aria-labelledby="tab-shrink" tabindex="0" hidden>
+        <div class="shrink-content">
+          <img class="product-icon" src="assets/shrink-icon.webp" width="96" height="96" alt="">
+          <h2>Less size.<br>More space.</h2>
+          <p>Photos that fit your limit.<br>Compressed on your iPhone.</p>
+          <div class="actions">
+            <a class="primary-link" href="https://apps.apple.com/app/id6804833389">Get Shrink <span aria-hidden="true">↗</span></a>
+            <a class="secondary-link" href="/shrink/">Explore the app <span aria-hidden="true">↗</span></a>
           </div>
-          <div class="teaser-video">
-            <video autoplay muted loop playsinline preload="metadata" poster="assets/mirrorly-poster.jpg" aria-label="Preview of Mirrorly on iPhone">
-              <source src="assets/mirrorly-teaser.mp4" type="video/mp4">
-            </video>
-            <span class="video-label">A first look at Mirrorly</span>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="about wrap">
-      <p class="eyebrow">The idea is simple</p>
-      <div><h2>One job.<br>Done properly.</h2><p>Every Bashubb app starts with one ordinary annoyance. The result is focused, native software without features that do not earn their place.</p></div>
-    </section>
+        </div>
+      </section>
+    </div>
+    <noscript><p class="fallback">Shrink is available for iPhone. <a href="/shrink/">Explore Shrink ↗</a></p></noscript>
   </main>
 
-  <footer class="wrap"><a class="brand" href="/"><img src="assets/bashubb-logo.png" width="40" height="40" alt="">bashubb</a><p>Independent apps from Warsaw, Poland.</p><a href="mailto:bashubb.dev@gmail.com">Contact ↗</a></footer>
-  <script>if(matchMedia('(prefers-reduced-motion: reduce)').matches){document.querySelectorAll('video').forEach(video=>{video.autoplay=false;video.pause()})}</script>
+  <footer>
+    <button class="email-copy" type="button" aria-label="Copy email address bashubb.dev@gmail.com" title="Copy email address">
+      <span class="email-address">bashubb.dev@gmail.com</span>
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h2"/></svg>
+    </button>
+    <span class="copy-status" role="status" aria-live="polite"></span>
+  </footer>
 </body>
 </html>
