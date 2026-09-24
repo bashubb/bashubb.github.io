@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bashubb.com/sitemap.xml
+Sitemap: https://bashubb.com/shrink/sitemap.xml
