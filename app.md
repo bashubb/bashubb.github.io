@@ -4,7 +4,7 @@ Research date: 2026-09-24. Website language: English. Listing checked in the US 
 
 ## Scope
 
-This is the studio homepage, not a second Shrink landing page. The composition uses a short introduction with two tilted product cards, then a compact live-app tile for Shrink and a larger upcoming-app teaser for Mirrorly. Shrink has no screenshot on the homepage; Mirrorly's supplied video is the teaser. Product-specific guides and FAQs remain on the existing Shrink website. No location is asserted.
+This is the studio homepage, not a second Shrink landing page. The editorial layout uses lavender and ink, DM Sans and Instrument Serif, with full-width product sections. Shrink has a conceptual file-size illustration (not a screenshot or measured compression result); Mirrorly uses the owner's portrait teaser, with its full frame preserved. Product-specific guides and FAQs remain on the existing Shrink website. No location is asserted.
 
 ## Shrink
 
@@ -48,7 +48,7 @@ Official Apple download badge source:
 https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg
 
 Badge guidance: https://developer.apple.com/app-store/marketing/guidelines/
-The SVG is used unchanged, upright, 48 px high, with clear space and no hover animation.
+The SVG is used unchanged, upright, 40 px high, with clear space and no hover animation.
 
 Apple's current icon source for reference:
 https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/75/ce/c7/75cec7a0-066a-7b32-3d8b-11118be99b06/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/512x512bb.jpg
