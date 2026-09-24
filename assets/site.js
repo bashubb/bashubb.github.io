@@ -1,8 +1,9 @@
-const tabs = [...document.querySelectorAll('[role="tab"]')];
 const video = document.querySelector('video');
 const playback = document.querySelector('.playback');
 const motion = matchMedia('(prefers-reduced-motion: reduce)');
 let userPaused = false;
+let manuallyStarted = false;
+let inView = false;
 
 function updatePlayback() {
   playback.dataset.paused = String(video.paused);
@@ -10,41 +11,19 @@ function updatePlayback() {
 }
 
 function syncVideo() {
-  const active = document.querySelector('#tab-mirrorly').getAttribute('aria-selected') === 'true';
-  if (!active || document.hidden || motion.matches || userPaused) video.pause();
-  else video.play().catch(updatePlayback);
+  if (!inView || document.hidden || userPaused || (motion.matches && !manuallyStarted)) {
+    video.pause();
+  } else {
+    video.play().catch(updatePlayback);
+  }
   updatePlayback();
 }
-
-function selectApp(app, focus = false) {
-  for (const tab of tabs) {
-    const selected = tab.dataset.app === app;
-    tab.setAttribute('aria-selected', String(selected));
-    tab.tabIndex = selected ? 0 : -1;
-    document.getElementById(tab.getAttribute('aria-controls')).hidden = !selected;
-    if (selected && focus) tab.focus();
-  }
-  syncVideo();
-}
-
-tabs.forEach((tab, index) => {
-  tab.addEventListener('click', () => selectApp(tab.dataset.app));
-  tab.addEventListener('keydown', event => {
-    let next;
-    if (event.key === 'ArrowRight') next = (index + 1) % tabs.length;
-    if (event.key === 'ArrowLeft') next = (index - 1 + tabs.length) % tabs.length;
-    if (event.key === 'Home') next = 0;
-    if (event.key === 'End') next = tabs.length - 1;
-    if (next === undefined) return;
-    event.preventDefault();
-    selectApp(tabs[next].dataset.app, true);
-  });
-});
 
 playback.hidden = false;
 playback.addEventListener('click', () => {
   if (video.paused) {
     userPaused = false;
+    manuallyStarted = true;
     video.play().catch(updatePlayback);
   } else {
     userPaused = true;
@@ -53,8 +32,15 @@ playback.addEventListener('click', () => {
 });
 video.addEventListener('play', updatePlayback);
 video.addEventListener('pause', updatePlayback);
-motion.addEventListener('change', syncVideo);
+motion.addEventListener('change', () => {
+  manuallyStarted = false;
+  syncVideo();
+});
 document.addEventListener('visibilitychange', syncVideo);
+new IntersectionObserver(entries => {
+  inView = entries[0].isIntersecting;
+  syncVideo();
+}, { threshold: 0.1 }).observe(video);
 syncVideo();
 
 const emailButton = document.querySelector('.email-copy');
@@ -71,7 +57,7 @@ emailButton.addEventListener('click', async () => {
     const selection = window.getSelection();
     selection.removeAllRanges();
     selection.addRange(range);
-    copyStatus.textContent = 'Select and copy the email address';
+    copyStatus.textContent = 'Select and copy the address';
   }
   copyTimer = setTimeout(() => { copyStatus.textContent = ''; }, 3500);
 });
