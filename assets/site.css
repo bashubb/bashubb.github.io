@@ -136,9 +136,53 @@ video { display: block; width: 100%; height: 100%; object-fit: cover; background
   .email-copy { gap: 10px; font-size: 11px; }
 }
 
+/* Keep the two product states in a single vertical story at every width. */
+.projects { display: block; width: 100%; }
+.product-section + .product-section { margin-top: 0; }
+.product-section > .section-label,
+.product-section > .product-card { width: min(1120px, calc(100% - 80px)); margin-inline: auto; }
+.product-section#shrink { width: 100%; }
+.product-section#mirrorly { width: 100%; }
+@media (max-width: 700px) {
+  .product-section > .section-label,
+  .product-section > .product-card { width: calc(100% - 40px); }
+  .product-section + .product-section { margin-top: 0; }
+}
+
 @media (max-width: 700px) {
   .mirrorly-art { padding: 0 28px 28px; }
   .film { width: min(100%, 300px); height: auto; min-height: 0; aspect-ratio: 9 / 16; }
+}
+
+/* Final studio rhythm: live work first, the next release below it. */
+.hero { display: block; padding-block: 76px 94px; }
+.hero-copy { max-width: 900px; }
+h1 { font-size: clamp(68px, 10vw, 138px); line-height: .92; font-weight: 800; letter-spacing: -.075em; }
+.hero-copy > p { font-size: 19px; }
+.projects { display: block; width: 100%; }
+.product-section { width: 100%; margin: 0; padding-block: 64px 72px; }
+.product-section > .section-label, .product-section > .product-card { width: min(1120px, calc(100% - 80px)); margin-inline: auto; }
+#shrink { background: #e7efff; }
+#mirrorly { background: #111a2b; }
+#mirrorly > .section-label { color: #b5c1d5; }
+.shrink-card { max-width: 760px; margin-left: max(40px, calc((100% - 1120px) / 2)) !important; background: #f6f8fc; border: 1px solid #dce5f4; }
+.shrink-card .product-copy { padding: 38px 42px 40px; }
+.mirrorly-card { display: block; max-width: 1120px; min-height: 0; background: transparent; color: #fff; }
+.mirrorly-art { min-height: 640px; padding: 0; }
+.mirrorly-art .light-ring { display: none; }
+.mirrorly-art .film { width: min(420px, 52%); max-width: none; height: 640px; min-height: 0; border-radius: 0; box-shadow: none; }
+.mirrorly-art video { object-fit: cover; }
+.site-footer { background: var(--paper); }
+@media (max-width: 700px) {
+  .hero { padding-block: 52px 68px; }
+  h1 { font-size: clamp(58px, 15vw, 88px); }
+  .hero-copy > p { font-size: 17px; }
+  .product-section { padding-block: 42px 48px; }
+  .product-section > .section-label, .product-section > .product-card { width: calc(100% - 40px); }
+  .shrink-card { max-width: none; margin-left: auto !important; }
+  .shrink-card .product-copy { padding: 30px 28px 32px; }
+  .mirrorly-art { min-height: 0; padding: 0; }
+  .mirrorly-art .film { width: 100%; height: auto; aspect-ratio: 9 / 16; }
 }
 @media (max-width: 380px) {
   .wrap { width: calc(100% - 32px); }
@@ -184,4 +228,14 @@ video { display: block; width: 100%; height: 100%; object-fit: cover; background
   .mirrorly-card { min-height: 0; }
   .mirrorly-card .product-copy { padding: 30px 28px 18px; }
   .mirrorly-art { min-height: 0; }
+}
+
+/* Final order for the studio homepage. */
+.projects { display: block !important; width: 100%; }
+.product-section + .product-section { margin-top: 0 !important; }
+.product-section > .section-label,
+.product-section > .product-card { width: min(1120px, calc(100% - 80px)); margin-inline: auto; }
+@media (max-width: 700px) {
+  .product-section > .section-label,
+  .product-section > .product-card { width: calc(100% - 40px); }
 }
