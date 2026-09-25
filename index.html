@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Bashubb — Independent iPhone App Studio</title>
-  <meta name="description" content="Bashubb is an independent iPhone app studio. Discover Shrink, a photo compressor for custom file sizes, and get a first look at Mirrorly.">
+  <meta name="description" content="Bashubb makes focused iPhone apps. Meet Shrink, the photo compressor, Brain Race, the quiz racing game, and Mirrorly, coming soon.">
   <link rel="canonical" href="https://bashubb.com/">
-  <meta name="theme-color" content="#eeedf5">
+  <meta name="theme-color" content="#f8fafc">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Bashubb">
   <meta property="og:title" content="Bashubb — Independent iPhone App Studio">
@@ -19,14 +19,14 @@
   <meta property="og:image:alt" content="Bashubb — white b with a blue dot on black">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Bashubb — Independent iPhone App Studio">
-  <meta name="twitter:description" content="Small apps. Useful ideas. Meet Shrink and get a first look at Mirrorly.">
+  <meta name="twitter:description" content="Meet Shrink and Brain Race — independent iPhone apps by Bashubb. Mirrorly is coming soon.">
   <meta name="twitter:image" content="https://bashubb.com/assets/bashubb-logo.png">
   <meta name="twitter:image:alt" content="Bashubb studio logo">
   <link rel="icon" href="assets/bashubb-logo.png" type="image/png">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" sizes="any">
   <link rel="apple-touch-icon" href="assets/bashubb-logo.png">
-  <link rel="stylesheet" href="assets/site.css?v=studio-0924">
-  <script src="assets/site.js?v=studio-0924" defer></script>
+  <link rel="stylesheet" href="assets/site.css?v=studio-0925">
+  <script src="assets/site.js?v=studio-0925" defer></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -55,7 +55,7 @@
         "name": "Bashubb — Independent iPhone App Studio",
         "isPartOf": {"@id": "https://bashubb.com/#website"},
         "about": {"@id": "https://bashubb.com/#studio"},
-        "mentions": {"@id": "https://bashubb.com/shrink/#app"},
+        "mentions": [{"@id": "https://bashubb.com/shrink/#app"}, {"@id": "https://bashubb.com/#brain-race-app"}],
         "inLanguage": "en"
       },
       {
@@ -70,6 +70,7 @@
         "description": "Compress photos to a chosen maximum KB or MB size on your iPhone.",
         "downloadUrl": "https://apps.apple.com/app/id6804833389"
       }
+      ,{"@type":"SoftwareApplication","@id":"https://bashubb.com/#brain-race-app","name":"Brain Race","url":"https://bashubb.com/TheBrainRace/","applicationCategory":"GameApplication","operatingSystem":"iOS 18.0 or later","image":"https://bashubb.com/assets/brain-race-icon.png","description":"A quiz racing game for iPhone. Steer into the correct answer across math, flags and general knowledge."}
     ]
   }
   </script>
@@ -77,68 +78,53 @@
 <body>
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-header wrap">
-    <a class="brand" href="/" aria-label="Bashubb home"><img src="assets/bashubb-logo.png" width="40" height="40" alt=""><span>bashubb</span></a>
-    <a class="header-link" href="#apps">Meet the apps <span aria-hidden="true">↘</span></a>
+    <a class="brand" href="/" aria-label="Bashubb home"><img src="assets/bashubb-logo.png" width="36" height="36" alt=""><span>bashubb<span class="brand-dot">.</span></span></a>
+    <nav aria-label="Main navigation"><a href="#apps">Our apps</a><a href="#studio">The studio</a><a href="#contact">Contact <span aria-hidden="true">↗</span></a></nav>
   </header>
-
   <main id="main">
     <section class="hero wrap" aria-labelledby="studio-title">
-      <div class="hero-copy">
-        <p class="eyebrow">Independent app studio</p>
-        <h1 id="studio-title">A little app.<br>A <em>lovely</em> difference<span class="period">.</span></h1>
-        <div class="hero-bottom"><p>One job. A good experience.<br>Thoughtful iPhone apps for the everyday.</p><a class="round-link" href="#apps" aria-label="Explore our apps">↓</a></div>
+      <p class="eyebrow"><span class="studio-dot" aria-hidden="true"></span> Small, independent app studio</p>
+      <h1 id="studio-title">A little useful.<br>A little playful.<br><span>Always thoughtful.</span></h1>
+      <p class="hero-description">From making photos fit to making your brain race.<br>We build iPhone apps with a clear purpose and a little personality.</p>
+      <a class="button primary" href="#apps">Find your next app <span aria-hidden="true">↓</span></a>
+      <div class="hero-icons" aria-label="Meet our apps">
+        <a href="#shrink" aria-label="Meet Shrink"><img src="assets/shrink-icon.webp" width="72" height="72" alt=""></a>
+        <a href="#brain-race" aria-label="Meet Brain Race"><img src="assets/brain-race-icon.png" width="72" height="72" alt=""></a>
+        <a href="#mirrorly" aria-label="Preview Mirrorly"><img src="assets/mirrorly-icon.png" width="72" height="72" alt=""></a>
       </div>
     </section>
-
-    <div class="projects" id="apps">
-      <section class="product-section" id="shrink" aria-labelledby="shrink-title">
-        <div class="section-top wrap"><p class="section-label"><span class="live-dot" aria-hidden="true"></span> Available now</p><span class="index">01 / Shrink</span></div>
-        <div class="product-card shrink-card">
-          <div class="product-copy">
-            <div class="product-heading">
-              <img src="assets/shrink-icon.webp" width="76" height="76" alt="">
-              <div><h2 id="shrink-title">Shrink</h2><p>Photos that fit.</p></div>
-            </div>
-            <h3>Big photos.<br><em>Smaller files.</em></h3>
-            <p class="product-description">Pick a size in KB or MB. Shrink makes your photos fit, right on your iPhone.</p>
-            <a class="button" href="/shrink/">Discover Shrink <span aria-hidden="true">↗</span></a>
-            <a class="app-store-link" href="https://apps.apple.com/app/id6804833389"><img src="assets/app-store-badge.svg" width="120" height="40" alt="Download on the App Store"></a>
-          </div>
-          <div class="shrink-art" role="img" aria-label="Illustration: choose a smaller target file size with Shrink"><div class="file file-large"><span>PHOTO</span><div class="landscape"><i></i></div><span>Room to shrink.</span></div><span class="compression-arrow" aria-hidden="true">↘</span><div class="file file-small"><span>YOUR SIZE</span><strong>500<span>KB</span></strong><span>Ready to share ↗</span></div><p class="art-caption">Less space. More possibilities.</p></div>
-        </div>
-      </section>
-
-      <section class="product-section" id="mirrorly" aria-labelledby="mirrorly-title">
-        <div class="section-top wrap"><p class="section-label">In the making</p><span class="index">02 / Mirrorly</span></div>
-        <div class="product-card mirrorly-card">
-          <div class="upcoming-copy"><p class="eyebrow">A little preview</p><h2 id="mirrorly-title">Coming<br><em>soon.</em></h2><p class="upcoming-note">Something to reflect on.</p></div>
-          <div class="mirrorly-art">
-            <span class="light-ring ring-one" aria-hidden="true"></span>
-            <span class="light-ring ring-two" aria-hidden="true"></span>
-            <div class="film">
-              <video muted loop playsinline preload="metadata" poster="assets/mirrorly-poster.jpg" aria-label="A first look at Mirrorly, a pocket mirror for iPhone">
-                <source src="assets/mirrorly-teaser.mp4" type="video/mp4">
-              </video>
-              <button class="playback" type="button" aria-label="Pause preview" hidden>
-                <svg class="pause-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 5h3v14H7zm7 0h3v14h-3z"/></svg>
-                <svg class="play-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m8 5 11 7-11 7z"/></svg>
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
+    <section class="apps-section wrap" id="apps" aria-labelledby="apps-title">
+      <div class="section-heading"><div><p class="eyebrow">Made by Bashubb</p><h2 id="apps-title">Small apps. Their own thing.</h2></div><p>A little collection. Still growing.</p></div>
+      <div class="app-grid">
+        <article class="app-card shrink-card" id="shrink" aria-labelledby="shrink-title">
+          <div class="card-top"><img class="app-icon" src="assets/shrink-icon.webp" width="80" height="80" alt=""><span class="status"><span aria-hidden="true"></span> Available now</span></div>
+          <p class="app-category">Photo &amp; video · iPhone</p>
+          <h3 id="shrink-title">Shrink</h3><p class="app-tagline">Big photos. Smaller files.</p>
+          <p class="app-description">Get your photos under the upload limit. Choose a size in KB or MB and compress them right on your iPhone.</p>
+          <div class="app-actions"><a class="text-link" href="/shrink/">Explore Shrink <span aria-hidden="true">↗</span></a><a class="app-store-link" href="https://apps.apple.com/app/id6804833389" aria-label="Download Shrink on the App Store"><img src="assets/app-store-badge.svg" width="120" height="40" alt="Download on the App Store"></a></div>
+        </article>
+        <article class="app-card brain-card" id="brain-race" aria-labelledby="brain-title">
+          <div class="card-top"><img class="app-icon" src="assets/brain-race-icon.png" width="80" height="80" alt=""><span class="status"><span aria-hidden="true"></span> Available now</span></div>
+          <p class="app-category">Quiz &amp; racing · iPhone</p>
+          <h3 id="brain-title">Brain Race</h3><p class="app-tagline">Think fast. Take the right lane.</p>
+          <p class="app-description">A quiz with a little more horsepower. Steer into the right answers, from quick maths to flags and general knowledge.</p>
+          <div class="app-actions"><a class="text-link" href="/TheBrainRace/">Explore Brain Race <span aria-hidden="true">↗</span></a></div>
+        </article>
+      </div>
+      <article class="upcoming" id="mirrorly" aria-labelledby="mirrorly-title">
+        <img src="assets/mirrorly-icon.png" width="60" height="60" alt="">
+        <div class="upcoming-copy"><h3 id="mirrorly-title">Mirrorly</h3><p>A pocket mirror, with a little extra light.</p></div>
+        <span class="soon">Coming soon <span aria-hidden="true">✳</span></span>
+      </article>
+    </section>
+    <section class="studio wrap" id="studio" aria-labelledby="about-title">
+      <div><p class="eyebrow">The studio</p><h2 id="about-title">Small on purpose.<br>Personal by design.</h2></div>
+      <div class="studio-copy"><p>Bashubb is an independent studio making apps for the little moments: a photo that needs to fit, a break that could be more fun, a quick look before heading out.</p><p>One app. One clear idea. Something you enjoy opening again.</p></div>
+    </section>
   </main>
-
-  <footer class="site-footer wrap">
-    <a class="footer-brand" href="/" aria-label="Bashubb home">bashubb<span aria-hidden="true">.</span></a>
-    <div class="email">
-      <button class="email-copy" type="button" aria-label="Copy email address bashubb.dev@gmail.com" title="Copy email address">
-        <span class="email-address">bashubb.dev@gmail.com</span>
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M15 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h2"/></svg>
-      </button>
-      <span class="copy-status" role="status" aria-live="polite"></span>
-    </div>
+  <footer class="site-footer wrap" id="contact">
+    <div><a class="footer-brand" href="/">bashubb<span>.</span></a><p>Useful things. Playful ideas.</p></div>
+    <div class="email"><span class="contact-label">Say hello · click to copy</span><button class="email-copy" type="button" aria-label="Copy email address bashubb.dev@gmail.com"><span class="email-address">bashubb.dev@gmail.com</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M15 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h2"/></svg></button><span class="copy-status" role="status" aria-live="polite"></span></div>
   </footer>
 </body>
 </html>

@@ -4,7 +4,7 @@ Research date: 2026-09-24. Website language: English. Listing checked in the US 
 
 ## Scope
 
-This is the studio homepage, not a second Shrink landing page. The editorial layout uses lavender and ink, DM Sans and Instrument Serif, with full-width product sections. Shrink has a conceptual file-size illustration (not a screenshot or measured compression result); Mirrorly uses the owner's portrait teaser, with its full frame preserved. Product-specific guides and FAQs remain on the existing Shrink website. No location is asserted.
+This is the studio homepage, not a second Shrink landing page. Revised 2026-09-25 following the owner's references, Platologica and SelfOrbit: a short centered introduction, two equal app cards, a compact Mirrorly preview, studio introduction and copy-email contact. Cool white, navy and blue; native system fonts. No videos, screenshots or conceptual file illustrations are loaded. Product-specific guides remain on their product websites. No location is asserted.
 
 ## Shrink
 
@@ -31,7 +31,13 @@ The browser research tool could not fetch the listing page directly; Apple's loo
 
 ## Mirrorly
 
-Coming soon, as confirmed by the owner. No release date, App Store URL, pricing, review count, or download claim is supplied. The homepage contains the owner's teaser video and a short coming-soon label, without a product-page link.
+Coming soon, as confirmed by the owner. No release date, App Store URL, pricing, review count, or download claim is supplied. The homepage uses the real app icon and a brief pocket-mirror description. The video is no longer embedded or loaded.
+
+## Brain Race
+
+Added 2026-09-25. Owner explicitly requested the public label "Available now" while confirming that the App Store release has not happened yet. This is launch-ready copy at the owner's direction, not independently verified store availability. Apple US Lookup returned zero results and https://apps.apple.com/app/id6795535432 returned 404. Consequently the homepage links only to the existing https://bashubb.com/TheBrainRace/ product site, with no direct App Store button for Brain Race.
+
+Facts and icon: ../.. /flahship bets/MirrorApp/brainrace-seo/app.md and its website/assets/app-icon.png (copied unchanged to assets/brain-race-icon.png). Quiz racing game for iPhone: steer toward correct answers across arithmetic, flags and general knowledge. iOS 18+. No pricing, reviews or educational outcome promises. Includes SoftwareApplication structured data without an Offer or ratings.
 
 ## Assets
 
