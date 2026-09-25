@@ -37,7 +37,7 @@ Coming soon, as confirmed by the owner. No release date, App Store URL, pricing,
 
 ## Brain Race
 
-Added 2026-09-25. Owner explicitly requested the public label "Available now" while confirming that the App Store release has not happened yet. This is launch-ready copy at the owner's direction, not independently verified store availability. Apple US Lookup returned zero results and https://apps.apple.com/app/id6795535432 returned 404. Consequently the homepage links only to the existing https://bashubb.com/TheBrainRace/ product site, with no direct App Store button for Brain Race.
+Added 2026-09-25. Owner explicitly requested the public label "Available now" while confirming that the App Store release has not happened yet. This is launch-ready copy at the owner's direction, not independently verified store availability. Apple US Lookup returned zero results and https://apps.apple.com/app/id6795535432 returned 404. The owner subsequently explicitly requested the App Store download button in preparation for imminent release; the official badge now links to that supplied app ID. The product website link is also retained.
 
 Facts and icon: ../.. /flahship bets/MirrorApp/brainrace-seo/app.md and its website/assets/app-icon.png (copied unchanged to assets/brain-race-icon.png). Quiz racing game for iPhone: steer toward correct answers across arithmetic, flags and general knowledge. iOS 18+. No pricing, reviews or educational outcome promises. Includes SoftwareApplication structured data without an Offer or ratings.
 
