@@ -1,5 +1,7 @@
 # Bashubb studio — verified product notes
 
+Brand rule: always spell the public brand as lowercase `bashubb`, including sentence beginnings, metadata, accessibility labels and structured data.
+
 Research date: 2026-09-24. Website language: English. Listing checked in the US storefront.
 
 ## Scope
