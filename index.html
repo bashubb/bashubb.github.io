@@ -21,7 +21,7 @@
 <link rel="apple-touch-icon" href="assets/fav/apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/landing.css?v=4">
-<link rel="stylesheet" href="assets/studio.css?v=2">
+<link rel="stylesheet" href="assets/studio.css?v=3">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -80,6 +80,7 @@
 
 <div class="cats" aria-label="App categories">
   <div class="cats-inner" id="cats">
+    <span class="pill" id="cats-pill" aria-hidden="true"></span>
     <a href="#lifestyle"><svg aria-hidden="true"><use href="#i-sun"/></svg>Lifestyle</a>
     <a href="#tools"><svg aria-hidden="true"><use href="#i-wrench"/></svg>Tools</a>
     <a href="#creativity"><svg aria-hidden="true"><use href="#i-film-strip"/></svg>Creativity</a>
@@ -217,6 +218,20 @@
 <script src="assets/landing.js?v=2"></script>
 <script>
 (() => {
+  // Category bar: the dark pill slides to the section you're reading
+  const links = [...document.querySelectorAll("#cats a")];
+  const pill = document.getElementById("cats-pill");
+  const move = (a) => {
+    links.forEach((l) => (l === a ? l.setAttribute("aria-current", "true") : l.removeAttribute("aria-current")));
+    if (!a) { pill.style.opacity = 0; return; }
+    pill.style.opacity = 1; pill.style.width = a.offsetWidth + "px"; pill.style.transform = `translateX(${a.offsetLeft}px)`;
+  };
+  const map = new Map(links.map((a) => [a.getAttribute("href").slice(1), a]));
+  const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) move(map.get(e.target.id) || null); }), { rootMargin: "-40% 0px -55% 0px" });
+  map.forEach((_, id) => io.observe(document.getElementById(id)));
+  ["main > .s-hero", "#studio"].forEach((q) => io.observe(document.querySelector(q)));
+  addEventListener("resize", () => move(links.find((l) => l.hasAttribute("aria-current")) || null));
+
   // Copy email
   const btn = document.querySelector(".email-copy"), status = document.querySelector(".copy-status");
   let timer;
