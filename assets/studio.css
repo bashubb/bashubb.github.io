@@ -134,3 +134,7 @@
 .s-hero .cta-row { justify-content: center; margin-top: var(--s-300); }
 .cat .app .status { display: none; }
 .s-hero .hero-title { max-width: 960px; }
+.cat-head .sec-title { margin: 0; font-size: inherit; line-height: inherit; }
+.cat-head .sec-title .status { font-size: 16px; line-height: 24px; padding: var(--s-75) var(--s-200); }
+.studio { padding-block: var(--s-700); }
+.studio-note { max-width: 560px; margin-inline: auto; text-align: center; color: var(--muted); }
