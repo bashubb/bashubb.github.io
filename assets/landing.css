@@ -380,3 +380,9 @@ h3 { font-size: 20px; line-height: 28px; letter-spacing: -0.01em; }
   .m-dock .btn { flex: none; }
   .m-dock .store-badge img { width: auto; height: 40px; border-radius: 0; }
 }
+
+/* A phone on its side: the portrait page in a frame, scaled to the height (see landing.js) */
+.fit-host, .fit-host body { height: 100%; overflow: hidden; }
+.fit-host body > *:not(.fit-frame) { display: none !important; }
+.fit-host body { background: var(--bg); }
+.fit-frame { position: fixed; left: 0; top: 0; border: 0; transform-origin: 0 0; background: var(--bg); box-shadow: 0 0 0 1px var(--line); }

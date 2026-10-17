@@ -6,6 +6,26 @@
   root.classList.remove("no-js");
   const reduce = matchMedia("(prefers-reduced-motion: reduce)");
 
+  // A phone on its side: show the portrait page, scaled down to fit the height (a frame of the same page)
+  const landMQ = matchMedia("(pointer: coarse) and (orientation: landscape) and (max-height: 540px)");
+  const embedded = window.self !== window.top;
+  if (landMQ.matches && !embedded) {
+    root.classList.add("fit-host");
+    const short = Math.min(screen.width, screen.height), long = Math.max(screen.width, screen.height);
+    const fw = Math.round(short), fh = Math.round(long * 0.86);
+    const f = document.createElement("iframe");
+    f.className = "fit-frame"; f.title = document.title; f.src = location.href;
+    f.style.width = fw + "px"; f.style.height = fh + "px";
+    const place = () => { const s = innerHeight / fh; f.style.transform = `translate3d(${((innerWidth - fw * s) / 2).toFixed(1)}px, 0, 0) scale(${s.toFixed(4)})`; };
+    place(); addEventListener("resize", place);
+    document.body.append(f);
+  }
+  if (!embedded) landMQ.addEventListener("change", () => location.reload());
+  if (embedded) document.addEventListener("click", (e) => {
+    const a = e.target.closest && e.target.closest("a[href]");
+    if (a && !a.getAttribute("href").startsWith("#")) a.target = "_top";
+  }, true);
+
   // Island nav + full screen menu
   const burger = document.querySelector(".burger");
   const menu = document.getElementById("menu");
