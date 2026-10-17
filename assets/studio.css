@@ -125,3 +125,12 @@
 @media (max-width: 480px) { .s-hero { padding-top: 104px; } .app { clip-path: inset(0 round 32px); } }
 .island { height: calc(var(--hdr, 64px) + env(safe-area-inset-top, 0px)); padding-top: env(safe-area-inset-top, 0px); }
 .cats { top: calc(var(--hdr, 64px) + env(safe-area-inset-top, 0px)); }
+
+/* Live / coming soon: the status leads the section, the category is a small label on each card */
+.cat-head .eyebrow .status { font-size: 14px; line-height: 20px; padding: var(--s-50) var(--s-200); }
+.app .kind { display: inline-flex; align-items: center; gap: var(--s-50); margin-bottom: var(--s-50); font-size: 12px; line-height: 16px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.app .kind svg { width: 14px; height: 14px; }
+.cat { scroll-margin-top: 96px; }
+.s-hero .cta-row { justify-content: center; margin-top: var(--s-300); }
+.cat .app .status { display: none; }
+.s-hero .hero-title { max-width: 960px; }
